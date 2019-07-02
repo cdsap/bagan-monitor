@@ -92,10 +92,10 @@ fun Application.main() {
 
 val connectionPool = MySQLConnectionBuilder.createConnectionPool {
     username = "root"
-    host = "127.0.0.1"
+    host = "http://bagan-mysql.default.svc.cluster.local"
     port = 3306
-    password = "password"
-    database = "alo"
+    password = "bagan"
+    database = "bagan"
     maxActiveConnections = 100
     maxIdleTime = TimeUnit.MINUTES.toMillis(15)
     maxPendingQueries = 10_000
